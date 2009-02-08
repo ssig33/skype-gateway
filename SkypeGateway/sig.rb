@@ -25,7 +25,9 @@ class SkypeIrcGateway
 	
 	def skype_initialize
 		@skype_client.receive_message do |channel, name, message|
-			@irc_client.send_message("#{name} > #{message}") if @skype_chat == channel.to_s
+			message.each_line do |msg|
+				@irc_client.send_message("#{name} > #{msg}")
+			end if @skype_chat == channel.to_s
 		end
 	end
 
