@@ -18,7 +18,7 @@ class TwitterToSkype
 		@twitter_id = config['twitter_id']
 		@twitter_password = config['twitter_password']
 		@skype_client = SimpleSkypeClient.new(@skype_chat)
-		@twitter_client = SimpleTwitterClient.new(@twitter_id, @twitter_password)
+		@twitter_client = SimpleTwitterClient.new(config)
 		twitter_initialize
 	end
 	
