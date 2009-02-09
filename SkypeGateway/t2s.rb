@@ -19,7 +19,13 @@ class TwitterToSkype
 		@twitter_password = config['twitter_password']
 		@skype_client = SimpleSkypeClient.new(@skype_chat)
 		@twitter_client = SimpleTwitterClient.new(config)
+		skype_initialize
 		twitter_initialize
+	end
+
+	def skype_initialize
+		@skype_client.receive_message do |channel, name, message|
+		end
 	end
 	
 	def twitter_initialize
