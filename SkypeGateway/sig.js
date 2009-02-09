@@ -13,7 +13,7 @@ do {
     var pid = oExec.ProcessID;
     WScript.Echo(pid);
     // WScript.Sleep(1000 * 10); // 10 secs
-    WScript.Sleep(1000 * 60 * 60 * 12); // 12 hours
+    WScript.Sleep(1000 * 60 * 60 * 4); // 4 hours
     var oExecKill = wShell.Exec("TASKKILL /F /PID " + pid);
     WScript.Sleep(1000);
 } while(true);
