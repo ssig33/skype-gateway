@@ -37,12 +37,12 @@ class TwitterToSkype
 	
 	def start
 		@skype_client.start
-		@irc_client.start
+		@twitter_client.start
 	end
 
 	def stop
 		@skype_client.stop
-		@irc_client.stop
+		@twitter_client.stop
 	end	
 end
 
