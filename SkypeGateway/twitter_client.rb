@@ -12,7 +12,7 @@ class SimpleTwitterClient
 	def initialize(config)
 		@config = config
 		unless config.has_key?('last_created_at') then
-			config['last_created_at'] = Time.now
+			config['last_created_at'] = '"' + Time.now.to_s + '"'
 		end
 		
 		id = config['twitter_id']
