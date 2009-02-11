@@ -63,7 +63,7 @@ class SimpleTwitterClient
 	end
 end
 
-if __FILE__ == $0 then
+def twitter_client_sample
 	config = Pit.get("TwitterToSkype" + (ARGV[0] ? "-#{ARGV[0]}" : ""),
 						  :require => {
 							  'skype_chat' => 'your skype channel id',
@@ -109,4 +109,8 @@ def twitter_sample
 	#h = t.user(:hirameki)
 	#puts "(talk) http://twitter.com/hirameki/status/#{h.status.id}"
 	#puts h.status.text.gsub(/&#(\d*?);/) { [$1.to_i].pack('U') }.gsub('&amp;gt;', '>')
+end
+
+if __FILE__ == $0 then
+	twitter_client_sample
 end

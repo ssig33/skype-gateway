@@ -15,8 +15,6 @@ class TwitterToSkype
 	def initialize(config)
 		@skype_chat = config['skype_chat']
 		@skype_name = config['skype_name']
-		@twitter_id = config['twitter_id']
-		@twitter_password = config['twitter_password']
 		@skype_client = SimpleSkypeClient.new(@skype_chat)
 		@twitter_client = SimpleTwitterClient.new(config)
 		skype_initialize
