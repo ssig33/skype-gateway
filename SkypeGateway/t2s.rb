@@ -29,7 +29,7 @@ class TwitterToSkype
 	def twitter_initialize
 		@twitter_client.receive_message do |user, url, message|
 			out = '-' * 30
-			out += "(talk) @#{user} - #{url} \n #{message}"
+			out += "\n (talk) @#{user} - #{url} \n #{message} \n"
 			out += '-' * 30
 			@skype_client.send_message(out)
 		end
