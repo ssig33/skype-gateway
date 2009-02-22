@@ -23,7 +23,7 @@ class SimpleIrcClient
 	end
 
 	def send_message(input)
-		send_cmd("NOTICE #{@channel} :#{input}")
+		send_cmd("PRIVMSG #{@channel} :#{input}")
 	end
 
 	def receive_message(&block)
